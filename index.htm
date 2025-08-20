@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Gift Guide</title>
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --container: rgba(0,0,0,0.5);
+      --text: #ffffff;
+      --muted: #d0d0d0;
+      --card-bg: rgba(255,255,255,0.04);
+      --card-border: rgba(255,255,255,0.12);
+    }
+
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+
+    .page {
+      min-height: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 1100px;
+      background: var(--container);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      text-align: center; /* Center content */
+    }
+
+    header { margin-bottom: 20px; }
+    h1 { font-size: 28px; margin: 0; font-weight: 700; }
+    .desc { color: var(--muted); font-size: 14px; }
+
+    section {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 2px solid var(--card-border); /* Divider line */
+    }
+
+    section:first-of-type {
+      border-top: none; /* Remove divider above first section */
+      padding-top: 0;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin: 0 0 20px 0;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; /* centers the block of cards */
+      gap: 16px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--text);
+      width: 180px;
+    }
+    
+    .thumb {
+      width: 100%;        
+      height: 180px;       
+      object-fit: cover;   
+      flex-shrink: 0;     
+      background: #2a2a2a; 
+    }
+
+    .meta { padding: 10px; text-align: center;}
+    .title { font-size: 14px; font-weight: 600; margin: 0 0 6px 0; }
+    .note { font-size: 12px; color: var(--muted); margin: 0; }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 2px solid var(--card-border); /* Divider above footer */
+      text-align: center;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="container">
+      <header>
+        <h1>🎁 My Gift Guide 🎁</h1>
+        <p class="desc">Each image links directly to the product.</p>
+      </header>
+
+      <!-- SECTION 1 -->
+      <section id="need">
+        <h2>Things I need but can’t afford:</h2>
+        <div class="grid">
+          <a class="card" href="https://amzn.eu/d/99rJh0U" target="_blank"><img class="thumb" src="https://i.imgur.com/0Zgp8Ve.png" alt="Air Fryer" /><div class="meta"><p class="title">Air Fryer</p></div></a>
+          <a class="card" href="https://amzn.eu/d/bDz4PtJ" target="_blank"><img class="thumb" src="https://i.imgur.com/ERgSuqV.png" alt="Anker Power Bank" /><div class="meta"><p class="title">Anker Power Bank</p></div></a>
+          <a class="card" href="https://www.etsy.com/uk/listing/1850466761/bulbasaur-chalk-bag-for-climbing-pokemon?ls=a&ga_order=most_relevant&ga_search_type=all&ga_view_type=gallery&ga_search_query=one+piece+chalk+bags&ref=sc_gallery-3-5&pro=1&sts=1&plkey=4aa276ac121f2a4d534ec5ed476287972e4296f9%3A1850466761" target="_blank"><img class="thumb" src="https://i.imgur.com/xFQNf51.png" alt="Bulbasaur Chalk Bag" /><div class="meta"><p class="title">Bulbasaur Chalk Bag</p></div></a>
+          <a class="card" href="https://amzn.eu/d/46ExDll" target="_blank"><img class="thumb" src="https://i.imgur.com/3qLpjLe.png" alt="Chef Knife" /><div class="meta"><p class="title">Chef Knife</p></div></a>
+          <a class="card" href="https://amzn.eu/d/99rJh0U" target="_blank"><img class="thumb" src="https://i.imgur.com/D512RAA.png" alt="Whetstone Set" /><div class="meta"><p class="title">Whetstone set</p></div></a>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section id="always">
+        <h2>Things I always want:</h2>
+        <div class="grid">
+          <a class="card" href="https://amzn.eu/d/gSg1kXs" target="_blank"><img class="thumb" src="https://i.imgur.com/idaEZ3b.png" alt="Toploader sleeves" /><div class="meta"><p class="title">Toploader sleeves</p></div></a>
+          <a class="card" href="https://www.cardmarket.com/en/OnePiece/Products/Boosters?idExpansion=5229" target="_blank"><img class="thumb" src="https://i.imgur.com/D5RJJY7.png" alt="One Piece Booster" /><div class="meta"><p class="title">One Piece OP01 Packs</p></div></a>
+          <a class="card" href="https://amzn.eu/d/jkup8Y3" target="_blank"><img class="thumb" src="https://i.imgur.com/kaX1Q23.png" alt="Clear Card Sleeves" /><div class="meta"><p class="title">Clear card sleeves</p></div></a>
+        </div>
+      </section>
+
+      <!-- SECTION 3 -->
+      <section id="now">
+        <h2>Things I could use right now:</h2>
+        <div class="grid">
+          <a class="card" href="https://www.tauntonleisure.com/dpt/pgr/online-in-store-10-gift-voucher__9849" target="_blank"><img class="thumb" src="https://i.imgur.com/qm9y9gx.png" alt="Gift Voucher" /><div class="meta"><p class="title">Taunton Leisure Gift Voucher</p></div></a>
+          <a class="card" href="https://amzn.eu/d/7cfSBWA" target="_blank"><img class="thumb" src="https://i.imgur.com/sayZ8HV.png" alt="Water Bottle" /><div class="meta"><p class="title">Water Bottle</p></div></a>
+          <a class="card" href="https://amzn.eu/d/2AZnXiP" target="_blank"><img class="thumb" src="https://i.imgur.com/sFEYqYI.png" alt="Duffel Bag" /><div class="meta"><p class="title">Duffel Bag</p></div></a>
+        </div>
+      </section>
+
+      <!-- SECTION 4 -->
+      <section id="wants">
+        <h2>Things I want but don’t really need all the time</h2>
+        <div class="grid">
+          <a class="card" href="https://amzn.eu/d/3TimUoU" target="_blank"><img class="thumb" src="https://i.imgur.com/ob2fHuY.png" alt="Monster Punch" /><div class="meta"><p class="title">Monster Punch</p></div></a>
+          <a class="card" href="https://amzn.eu/d/0hFlESW" target="_blank"><img class="thumb" src="https://i.imgur.com/PsjETWW.png" alt="A3 Picture frames" /><div class="meta"><p class="title">A3 Picture frames</p></div></a>
+          <a class="card" href="https://www.cardmarket.com/en/OnePiece/Products/Boosters?idExpansion=5426" target="_blank"><img class="thumb" src="https://i.imgur.com/5DQ4J6z.png" alt="One piece OP05 Packs" /><div class="meta"><p class="title">One piece OP05 Packs</p></div></a>
+          <a class="card" href="https://www.rolysfudge.co.uk/shop/rolys-fudge-website-gift-voucher" target="_blank"><img class="thumb" src="https://i.imgur.com/iCynHuE.png" alt="Rolys Fudge Giftcards" /><div class="meta"><p class="title">Rolys Fudge Giftcards</p></div></a>
+          <a class="card" href="https://www.marksandspencer.com/record-gift-card/p/gcp60616655#intid=pid_pg1pip30g4r5c4" target="_blank"><img class="thumb" src="https://i.imgur.com/dhahFtW.png" alt="Marks and spencer giftcards" /><div class="meta"><p class="title">Marks and spencer giftcards</p></div></a>
+        </div>
+      </section>
+
+      <footer>
+        <p>Yes I made a whole HTML file for this</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
